@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Weather Diary</title>
+
+        <meta name="description" content="Weather Diary web application">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Weather Diary</h1>
+
+            <p>Personal weather and mood journal.</p>
+
+            <div class="buttons">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <button id="darkModeBtn">🌙 Dark Mode</button>
+            </div>
+        </div>
+
+        <script>
+            const darkModeBtn = document.getElementById("darkModeBtn");
+        
+            darkModeBtn.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+        
+                if(document.body.classList.contains("dark-mode")) {
+                    darkModeBtn.innerHTML = "☀️ Light Mode";
+                } else {
+                    darkModeBtn.innerHTML = "🌙 Dark Mode";
+                }
+            });
+        </script>
+
+        <script src="js/theme.js"></script>
+
+    </body>
+</html>
